@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen bg-sapo-cream overflow-x-hidden font-sans">
       {/* --- NAVBAR --- */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-[100] flex justify-between items-center px-8 py-3 bg-white border-sapo rounded-full">
-        <div className="text-3xl font-black tracking-tighter uppercase font-syne text-primary">Sapo</div>
+        <div className="text-3xl font-black tracking-tighter uppercase font-syne text-primary">Sapo.</div>
         <div className="hidden md:flex gap-10 text-[10px] font-black uppercase tracking-widest">
           <a href="#about" className="hover:text-sapo-terracotta transition-colors">La Cueva</a>
           <a href="#menu" className="hover:text-sapo-terracotta transition-colors">Caffeine</a>
