@@ -109,11 +109,13 @@ export default function Home() {
           </div>
           
           <div className="relative">
-            <div className="absolute -top-10 -right-10 w-40 h-40 bg-sapo-terracotta border-sapo rounded-full z-10 flex items-center justify-center rotate-12">
-               <span className="font-marker text-2xl text-white">Original</span>
-            </div>
             <div className="relative aspect-square bg-zinc-800 rounded-[3rem] overflow-hidden border-sapo border-white/20 transform -rotate-2">
-               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800')] bg-cover bg-center opacity-60" />
+               <Image 
+                 src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=800" 
+                 alt="La Cueva del Sapo"
+                 fill
+                 className="object-cover opacity-80"
+               />
             </div>
           </div>
         </div>
