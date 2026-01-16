@@ -34,7 +34,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center lg:text-left flex flex-col items-center lg:items-start z-20 justify-center"
+            className="text-center lg:text-left flex flex-col items-center lg:items-start z-20 justify-center lg:pl-24"
           >
             <motion.div 
               initial={{ rotate: 0 }}
