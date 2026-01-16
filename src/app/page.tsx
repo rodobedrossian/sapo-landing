@@ -27,37 +27,37 @@ export default function Home() {
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-sapo-pink/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-sapo-terracotta/20 rounded-full blur-3xl" />
 
-        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-0 z-10 h-full max-h-[800px]">
+        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-0 z-10 h-full max-h-[750px]">
           
           {/* COLUMNA DE TEXTO: Ajustada para entrar en el viewport */}
           <motion.div 
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center lg:text-left flex flex-col items-center lg:items-start z-20 justify-center lg:pl-24"
+            className="text-center lg:text-left flex flex-col items-center lg:items-start z-20 justify-center lg:pl-16 xl:pl-24"
           >
             <motion.div 
               initial={{ rotate: 0 }}
               animate={{ rotate: -2 }}
-              className="inline-block bg-sapo-pink border-2 border-black px-4 py-1.5 mb-6 lg:mb-8 shadow-[4px_4px_0px_#000]"
+              className="inline-block bg-sapo-pink border-2 border-black px-4 py-1 mb-4 lg:mb-6 shadow-[4px_4px_0px_#000]"
             >
-              <span className="font-marker text-lg md:text-2xl uppercase tracking-widest">Caffeine & Cuisine</span>
+              <span className="font-marker text-lg md:text-xl uppercase tracking-widest">Caffeine & Cuisine</span>
             </motion.div>
             
-            <h1 className="text-5xl md:text-8xl lg:text-[10rem] font-black font-syne leading-[0.85] tracking-tighter uppercase text-primary text-shadow-sapo mb-6">
+            <h1 className="text-5xl md:text-7xl lg:text-[8.5rem] font-black font-syne leading-[0.85] tracking-tighter uppercase text-primary text-shadow-sapo mb-4 lg:mb-6">
               SALTÁ POR <br />
               EL CAFÉ.
             </h1>
             
-            <div className="relative mb-8 lg:mb-12">
-              <h2 className="text-3xl md:text-5xl lg:text-7xl font-marker text-sapo-terracotta lg:-rotate-2 leading-tight">
+            <div className="relative mb-6 lg:mb-8">
+              <h2 className="text-2xl md:text-4xl lg:text-6xl font-marker text-sapo-terracotta lg:-rotate-2 leading-tight">
                 Specialty coffee <br className="lg:hidden" /> & morfi del bueno
               </h2>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
-              <button className="bg-primary text-white px-10 py-4 lg:py-5 rounded-2xl font-black uppercase flex items-center justify-center gap-4 border-2 border-black shadow-[6px_6px_0px_#D36B41] hover:translate-y-1 hover:shadow-none transition-all text-lg lg:text-xl active:scale-95">
-                Ver el Menú <ArrowRight size={24} />
+              <button className="bg-primary text-white px-8 py-3.5 lg:py-4 rounded-2xl font-black uppercase flex items-center justify-center gap-4 border-2 border-black shadow-[6px_6px_0px_#D36B41] hover:translate-y-1 hover:shadow-none transition-all text-lg active:scale-95">
+                Ver el Menú <ArrowRight size={22} />
               </button>
             </div>
           </motion.div>
