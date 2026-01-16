@@ -22,61 +22,62 @@ export default function Home() {
       </nav>
 
       {/* --- HERO SECTION --- */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-20 pb-10">
+      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-24 lg:pt-0">
         {/* Background elements */}
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-sapo-pink/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-sapo-terracotta/20 rounded-full blur-3xl" />
 
-        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-12 z-10">
+        <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-0 z-10">
           
-          {/* COLUMNA DE TEXTO: Alineación dinámica */}
+          {/* COLUMNA DE TEXTO: Impacto y Legibilidad */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left flex flex-col items-center lg:items-start"
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="text-center lg:text-left flex flex-col items-center lg:items-start z-20"
           >
-            <div className="inline-block bg-sapo-pink border-2 border-black px-4 py-1 mb-6 rotate-[-2deg] shadow-[4px_4px_0px_#000]">
-              <span className="font-marker text-lg md:text-xl uppercase tracking-widest">Caffeine & Cuisine</span>
-            </div>
+            <motion.div 
+              initial={{ rotate: 0 }}
+              animate={{ rotate: -2 }}
+              className="inline-block bg-sapo-pink border-2 border-black px-6 py-2 mb-8 shadow-[6px_6px_0px_#000]"
+            >
+              <span className="font-marker text-xl md:text-3xl uppercase tracking-widest">Caffeine & Cuisine</span>
+            </motion.div>
             
-            <h1 className="text-6xl md:text-8xl lg:text-[9rem] font-black font-syne leading-[0.85] tracking-tighter uppercase text-primary text-shadow-sapo">
+            <h1 className="text-7xl md:text-[10rem] lg:text-[13rem] font-black font-syne leading-[0.8] tracking-tighter uppercase text-primary text-shadow-sapo mb-6">
               SALTÁ POR <br />
               EL CAFÉ.
             </h1>
             
-            <div className="relative mt-4">
-              <h2 className="text-4xl md:text-6xl font-marker text-sapo-terracotta lg:-rotate-3">
-                Quedate por el mood
+            <div className="relative mb-12">
+              <h2 className="text-5xl md:text-8xl font-marker text-sapo-terracotta lg:-rotate-2">
+                Specialty coffee & morfi del bueno
               </h2>
             </div>
 
-            <div className="mt-12">
-              <button className="bg-primary text-white px-10 py-5 rounded-2xl font-black uppercase flex items-center gap-3 border-2 border-black shadow-[6px_6px_0px_#D36B41] hover:translate-y-1 hover:shadow-none transition-all active:scale-95">
-                Ver el Menú <ArrowRight size={22} />
+            <div className="flex flex-col sm:flex-row gap-6">
+              <button className="bg-primary text-white px-12 py-6 rounded-2xl font-black uppercase flex items-center justify-center gap-4 border-2 border-black shadow-[8px_8px_0px_#D36B41] hover:translate-y-1 hover:shadow-none transition-all text-xl active:scale-95">
+                Ver el Menú <ArrowRight size={28} />
               </button>
             </div>
           </motion.div>
 
-          {/* COLUMNA DEL SAPO: Integración visual */}
+          {/* COLUMNA DEL SAPO: Tamaño Máximo y Presencia */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8, y: 50 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative flex justify-center lg:justify-end items-center"
+            initial={{ opacity: 0, scale: 0.8, x: 100 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+            className="relative h-[50vh] lg:h-[90vh] w-full flex justify-center lg:justify-end items-center mt-12 lg:mt-0"
           >
-            <div className="relative w-72 h-72 md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] animate-float">
+            <div className="relative w-full h-full max-w-[900px] animate-float">
               <Image 
                 src="/sapo-hero.png" 
-                alt="Sapo" 
+                alt="Sapo Hero" 
                 fill
-                className="object-contain"
+                className="object-contain object-center lg:object-right-bottom"
                 priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
-              {/* Globo de texto reposicionado para UX: más legible y no tapa el centro */}
-              <div className="absolute -top-4 -right-4 lg:top-10 lg:-right-10 bg-white border-4 border-black p-3 md:p-4 rotate-12 font-marker text-sm md:text-xl shadow-[6px_6px_0px_#000] z-20">
-                "¡Está increíble!"
-              </div>
             </div>
           </motion.div>
         </div>
