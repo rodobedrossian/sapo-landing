@@ -200,17 +200,17 @@ export default function Home() {
             <div className="bg-white border-sapo p-8 rounded-[2rem]">
                <MapPin size={32} className="mb-4 text-sapo-terracotta" />
                <h4 className="font-black uppercase text-2xl mb-2">La Cueva</h4>
-               <p className="font-medium opacity-70 italic text-lg">Calle Falsa 123, Palermo CABA</p>
+               <p className="font-medium opacity-70 italic text-lg">Rodríguez Peña 22, Martínez, BA</p>
             </div>
             <div className="bg-white border-sapo p-8 rounded-[2rem]">
                <Coffee size={32} className="mb-4 text-sapo-pink" />
                <h4 className="font-black uppercase text-2xl mb-2">El Reloj</h4>
-               <p className="font-medium opacity-70 italic text-lg">Mar a Dom — 09 a 21 hs.</p>
+               <p className="font-medium opacity-70 italic text-lg">8:30 a 19:30 | Mar-Dom</p>
             </div>
           </div>
 
           <div className="mt-20 flex justify-center gap-10">
-            <a href="#" className="flex flex-col items-center gap-2 group">
+            <a href="https://www.instagram.com/sapo.caffeine/?hl=es" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center gap-2 group">
               <div className="w-16 h-16 bg-white border-sapo rounded-2xl flex items-center justify-center group-hover:bg-sapo-pink transition-all">
                 <Instagram size={30} />
               </div>
