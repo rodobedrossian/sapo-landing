@@ -22,54 +22,54 @@ export default function Home() {
       </nav>
 
       {/* --- HERO SECTION --- */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-24 lg:pt-0">
+      <section className="relative h-screen flex items-center justify-center px-6 overflow-hidden pt-32 lg:pt-20">
         {/* Background elements */}
         <div className="absolute top-1/4 -left-20 w-80 h-80 bg-sapo-pink/30 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-sapo-terracotta/20 rounded-full blur-3xl" />
 
-        <div className="max-w-[1600px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-0 z-10">
+        <div className="max-w-[1400px] mx-auto w-full grid grid-cols-1 lg:grid-cols-2 items-center gap-8 lg:gap-0 z-10 h-full max-h-[800px]">
           
-          {/* COLUMNA DE TEXTO: Impacto y Legibilidad */}
+          {/* COLUMNA DE TEXTO: Ajustada para entrar en el viewport */}
           <motion.div 
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-center lg:text-left flex flex-col items-center lg:items-start z-20"
+            className="text-center lg:text-left flex flex-col items-center lg:items-start z-20 justify-center"
           >
             <motion.div 
               initial={{ rotate: 0 }}
               animate={{ rotate: -2 }}
-              className="inline-block bg-sapo-pink border-2 border-black px-6 py-2 mb-8 shadow-[6px_6px_0px_#000]"
+              className="inline-block bg-sapo-pink border-2 border-black px-4 py-1.5 mb-6 lg:mb-8 shadow-[4px_4px_0px_#000]"
             >
-              <span className="font-marker text-xl md:text-3xl uppercase tracking-widest">Caffeine & Cuisine</span>
+              <span className="font-marker text-lg md:text-2xl uppercase tracking-widest">Caffeine & Cuisine</span>
             </motion.div>
             
-            <h1 className="text-7xl md:text-[10rem] lg:text-[13rem] font-black font-syne leading-[0.8] tracking-tighter uppercase text-primary text-shadow-sapo mb-6">
+            <h1 className="text-5xl md:text-8xl lg:text-[10rem] font-black font-syne leading-[0.85] tracking-tighter uppercase text-primary text-shadow-sapo mb-6">
               SALTÁ POR <br />
               EL CAFÉ.
             </h1>
             
-            <div className="relative mb-12">
-              <h2 className="text-5xl md:text-8xl font-marker text-sapo-terracotta lg:-rotate-2">
-                Specialty coffee & morfi del bueno
+            <div className="relative mb-8 lg:mb-12">
+              <h2 className="text-3xl md:text-5xl lg:text-7xl font-marker text-sapo-terracotta lg:-rotate-2 leading-tight">
+                Specialty coffee <br className="lg:hidden" /> & morfi del bueno
               </h2>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-6">
-              <button className="bg-primary text-white px-12 py-6 rounded-2xl font-black uppercase flex items-center justify-center gap-4 border-2 border-black shadow-[8px_8px_0px_#D36B41] hover:translate-y-1 hover:shadow-none transition-all text-xl active:scale-95">
-                Ver el Menú <ArrowRight size={28} />
+              <button className="bg-primary text-white px-10 py-4 lg:py-5 rounded-2xl font-black uppercase flex items-center justify-center gap-4 border-2 border-black shadow-[6px_6px_0px_#D36B41] hover:translate-y-1 hover:shadow-none transition-all text-lg lg:text-xl active:scale-95">
+                Ver el Menú <ArrowRight size={24} />
               </button>
             </div>
           </motion.div>
 
-          {/* COLUMNA DEL SAPO: Tamaño Máximo y Presencia */}
+          {/* COLUMNA DEL SAPO: Tamaño optimizado para no empujar el contenido */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.8, x: 100 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="relative h-[50vh] lg:h-[90vh] w-full flex justify-center lg:justify-end items-center mt-12 lg:mt-0"
+            className="relative h-[35vh] lg:h-[75vh] w-full flex justify-center lg:justify-end items-center mt-4 lg:mt-0"
           >
-            <div className="relative w-full h-full max-w-[900px] animate-float">
+            <div className="relative w-full h-full max-w-[700px] animate-float">
               <Image 
                 src="/sapo-hero.png" 
                 alt="Sapo Hero" 
