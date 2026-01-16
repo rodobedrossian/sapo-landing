@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Coffee, Wine, Utensils, MapPin, Instagram, ArrowRight, Star, Heart } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -54,15 +55,21 @@ export default function Home() {
           </div>
         </motion.div>
 
-        {/* The Sapo Maskot (Caffeine version) */}
+        {/* The Sapo Maskot */}
         <motion.div 
-          className="absolute -bottom-10 md:right-20 w-64 h-64 md:w-96 md:h-96 z-20 animate-float"
+          className="absolute -bottom-10 md:right-10 w-80 h-80 md:w-[600px] md:h-[600px] z-20 animate-float"
           style={{ transformOrigin: "bottom center" }}
         >
-          {/* Mockup del Sapo de la imagen 2 (Terracotta stipple) */}
-          <div className="relative w-full h-full flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500">
-             <div className="text-[12rem] md:text-[20rem] select-none">🐸</div>
-             <div className="absolute top-0 right-0 bg-white border-2 border-black p-2 rotate-12 font-marker text-xs md:text-sm">
+          <div className="relative w-full h-full flex items-center justify-center">
+             <Image 
+               src="/sapo-hero.png" 
+               alt="Sapo" 
+               width={600} 
+               height={600} 
+               className="object-contain"
+               priority
+             />
+             <div className="absolute top-10 right-0 bg-white border-4 border-black p-4 rotate-12 font-marker text-sm md:text-xl shadow-[6px_6px_0px_#000]">
                 "¡Está increíble!"
              </div>
           </div>
@@ -159,8 +166,16 @@ export default function Home() {
 
       {/* --- VINO & VIBES (EVENTS) --- */}
       <section id="events" className="py-32 bg-sapo-terracotta text-white px-6 relative overflow-hidden">
-        {/* Mockup del Sapo de la imagen 1 (Wine version) */}
-        <div className="absolute top-0 right-0 opacity-10 text-[30rem] -mr-40 rotate-12 pointer-events-none">🐸</div>
+        {/* Background Sapo */}
+        <div className="absolute top-0 right-0 opacity-10 w-[500px] h-[500px] -mr-40 rotate-12 pointer-events-none">
+          <Image 
+            src="/sapo-hero.png" 
+            alt="Sapo Background" 
+            width={500} 
+            height={500} 
+            className="object-contain invert brightness-0"
+          />
+        </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="flex flex-col md:flex-row gap-12 items-center">
